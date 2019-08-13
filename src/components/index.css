@@ -1,0 +1,53 @@
+.keypad {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 400px;
+  padding: 10px;
+  background: #f2f2f2;
+  user-select: none;
+}
+.keypad__field {
+  width: 100%;
+  outline: none;
+  border: 1px solid;
+  border-color: #999 !important;
+  min-height: 32px;
+  border-radius: 4px !important;
+  background: #fff;
+  box-shadow: none !important;
+  padding: 3px 10px;
+  box-sizing: border-box;
+}
+.keypad__row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.keypad__key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - 50px) / 10);
+  height: 42px;
+  border-radius: 5px;
+  line-height: 42px;
+  background: #fff;
+  margin: 3px;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+.keypad__key svg {
+  width: 30px;
+  height: 20px;
+  max-width: 100%;
+}
+@media (hover: hover) {
+  .keypad__key:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+}
