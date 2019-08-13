@@ -1,13 +1,12 @@
 import * as React from "react";
-import { ENG, NUM, MATH } from "../config/keys";
+import classNames from 'classnames';
+import { LETTER, NUM, MATH } from "../config/keys";
 
 import "./index.css";
 const MODE = {
   LETTER: 0,
-  CAP_LETTER: 1,
-  NUM: 2,
-  MATH: 3
-};
+  NUM: 1
+}
 export default class Keypad extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -37,13 +36,7 @@ export default class Keypad extends React.PureComponent {
       }
     });
   }
-  get keys() {
-    const { mode } = this.state;
-    if (mode === MODE.NUM) return NUM;
-    if (mode === MODE.CAP_LETTER) return ENG.caps;
-    if (mode === MODE.MATH) return MATH;
-    return ENG.letter;
-  }
+
   onClickKey = key => {
     const { mode } = this.state;
     switch (key) {
@@ -51,10 +44,17 @@ export default class Keypad extends React.PureComponent {
         this.mathField.keystroke(key);
         break;
       case "shift":
-        this.shiftMode({ mode: 1 - mode });
+        this.shiftMode(1 - mode);
+        break;
+      case "num":
+        this.shiftMode(MODE.NUM);
+
+      case 'math':
+        this.shiftMode(MODE.MATH);
         break;
       default:
-        this.mathField.cmd(key);
+        const _k = mode === MODE.CAP_LETTER ? key.toUpperCase() : key
+        this.mathField.cmd(_k);
         break;
     }
   };
@@ -62,18 +62,19 @@ export default class Keypad extends React.PureComponent {
     this.setState({ mode });
   };
   render() {
+    const {mode} = this.state
     return (
       <div className="keypad">
         <div ref={ref => (this.input = ref)} className="keypad__field" />
-        {this.keys.map((row, index) => (
+        {LETTER.map((row, index) => (
           <div key={index} className="keypad__row">
             {row.map(key => (
               <span
                 key={key.v}
-                className="keypad__key"
+                className={classNames(["keypad__key", key.c])}
                 onClick={this.onClickKey.bind(this, key.v)}
               >
-                {key.k}
+                {mode === MODE.CAP_LETTER ? key.k.toUpperCase() : key.k}
                 {!key.k && key.i}
               </span>
             ))}
@@ -82,4 +83,11 @@ export default class Keypad extends React.PureComponent {
       </div>
     );
   }
+}
+class LetterPad extends React.PureComponent {
+  
+}
+
+class NumPad extends React.PureComponent {
+
 }

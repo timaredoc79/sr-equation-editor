@@ -1,6 +1,5 @@
 import * as img from "./images";
-export const ENG = {
-  letter: [
+export const LETTER = [
     [
       { k: "q", v: "q", t: false },
       { k: "w", v: "w", t: false },
@@ -25,7 +24,7 @@ export const ENG = {
       { k: "l", v: "l", t: false }
     ],
     [
-      { k: "", v: "shift", i: img.shift, s: false },
+      { k: "", v: "shift", i: img.shift, s: false, c: 'gray flex'},
       { k: "z", v: "z", t: false },
       { k: "x", v: "x", t: false },
       { k: "c", v: "c", t: false },
@@ -33,46 +32,15 @@ export const ENG = {
       { k: "b", v: "b", t: false },
       { k: "n", v: "n", t: false },
       { k: "m", v: "m", t: false },
-      { k: "", v: "Backspace", i: img.back, t: false }
-    ]
-  ],
-  caps: [
-    [
-      { k: "Q", v: "Q", t: false },
-      { k: "W", v: "W", t: false },
-      { k: "E", v: "E", t: false },
-      { k: "R", v: "R", t: false },
-      { k: "T", v: "T", t: false },
-      { k: "Y", v: "Y", t: false },
-      { k: "U", v: "U", t: false },
-      { k: "I", v: "I", t: false },
-      { k: "O", v: "O", t: false },
-      { k: "P", v: "P", t: false }
+      { k: "", v: "Backspace", i: img.back, t: false, c: 'gray flex' }
     ],
     [
-      { k: "A", v: "A", t: false },
-      { k: "S", v: "S", t: false },
-      { k: "D", v: "D", t: false },
-      { k: "F", v: "F", t: false },
-      { k: "G", v: "G", t: false },
-      { k: "H", v: "H", t: false },
-      { k: "J", v: "J", t: false },
-      { k: "K", v: "K", t: false },
-      { k: "L", v: "L", t: false }
-    ],
-    [
-      { k: "", v: "shift", i: img.shift, s: true },
-      { k: "Z", v: "Z", t: false },
-      { k: "X", v: "X", t: false },
-      { k: "C", v: "C", t: false },
-      { k: "V", v: "V", t: false },
-      { k: "B", v: "B", t: false },
-      { k: "N", v: "N", t: false },
-      { k: "M", v: "M", t: false },
-      { k: "", v: "Backspace", i: img.back, t: false }
+      {k: "123", v: "num", c: 'gray flex'},
+      {k: '符', v: 'math', c: 'gray'},
+      {k: '空格', v: 'space', c: 'width4'},
+      {k: '=', v: '=', c:'gray flex'}
     ]
-  ]
-};
+  ];
 
 export const NUM = [
   { k: "1", v: "1", t: false },
