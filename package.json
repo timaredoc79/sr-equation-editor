@@ -2,7 +2,7 @@
   "name": "math-keypad-react",
   "version": "1.0.0",
   "description": "math keypad with mathquill for react",
-  "main": "index.js",
+  "main": "dis/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
