@@ -25,8 +25,28 @@ module.exports = {
         exclude: /(node_modules|bower_components)/
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        test: /\.s?css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: { importLoaders: 1 }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              ident: "postcss",
+              parser: "postcss-scss",
+              plugins: () => [
+                require("autoprefixer")({
+                  browsers: ["last 10 version", "ie >= 10"]
+                })
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

@@ -1,68 +1,72 @@
 import * as img from "./images";
 export const LETTER = [
-    [
-      { k: "q", v: "q", t: false },
-      { k: "w", v: "w", t: false },
-      { k: "e", v: "e", t: false },
-      { k: "r", v: "r", t: false },
-      { k: "t", v: "t", t: false },
-      { k: "y", v: "y", t: false },
-      { k: "u", v: "u", t: false },
-      { k: "i", v: "i", t: false },
-      { k: "o", v: "o", t: false },
-      { k: "p", v: "p", t: false }
-    ],
-    [
-      { k: "a", v: "a", t: false },
-      { k: "s", v: "s", t: false },
-      { k: "d", v: "d", t: false },
-      { k: "f", v: "f", t: false },
-      { k: "g", v: "g", t: false },
-      { k: "h", v: "h", t: false },
-      { k: "j", v: "j", t: false },
-      { k: "k", v: "k", t: false },
-      { k: "l", v: "l", t: false }
-    ],
-    [
-      { k: "", v: "shift", i: img.shift, s: false, c: 'gray flex'},
-      { k: "z", v: "z", t: false },
-      { k: "x", v: "x", t: false },
-      { k: "c", v: "c", t: false },
-      { k: "v", v: "v", t: false },
-      { k: "b", v: "b", t: false },
-      { k: "n", v: "n", t: false },
-      { k: "m", v: "m", t: false },
-      { k: "", v: "Backspace", i: img.back, t: false, c: 'gray flex' }
-    ],
-    [
-      {k: "123", v: "num", c: 'gray flex'},
-      {k: '符', v: 'math', c: 'gray'},
-      {k: '空格', v: 'space', c: 'width4'},
-      {k: '=', v: '=', c:'gray flex'}
-    ]
-  ];
+  [
+    { k: "q", v: "q", t: false },
+    { k: "w", v: "w", t: false },
+    { k: "e", v: "e", t: false },
+    { k: "r", v: "r", t: false },
+    { k: "t", v: "t", t: false },
+    { k: "y", v: "y", t: false },
+    { k: "u", v: "u", t: false },
+    { k: "i", v: "i", t: false },
+    { k: "o", v: "o", t: false },
+    { k: "p", v: "p", t: false }
+  ],
+  [
+    { k: "a", v: "a", t: false },
+    { k: "s", v: "s", t: false },
+    { k: "d", v: "d", t: false },
+    { k: "f", v: "f", t: false },
+    { k: "g", v: "g", t: false },
+    { k: "h", v: "h", t: false },
+    { k: "j", v: "j", t: false },
+    { k: "k", v: "k", t: false },
+    { k: "l", v: "l", t: false }
+  ],
+  [
+    { k: "", v: "shift", i: img.shift, s: false, c: "gray flex" },
+    { k: "z", v: "z", t: false },
+    { k: "x", v: "x", t: false },
+    { k: "c", v: "c", t: false },
+    { k: "v", v: "v", t: false },
+    { k: "b", v: "b", t: false },
+    { k: "n", v: "n", t: false },
+    { k: "m", v: "m", t: false },
+    { k: "", v: "Backspace", i: img.back, t: false, c: "gray flex" }
+  ],
+  [
+    { k: "123", v: "num", c: "gray flex" },
+    { k: "空格", v: "space", c: "width5" },
+    { k: "=", v: "=", c: "gray flex" }
+  ]
+];
 
 export const NUM = [
   { k: "1", v: "1", t: false },
   { k: "2", v: "2", t: false },
   { k: "3", v: "3", t: false },
+  { k: "", v: "Backspace", i: img.back, t: false, c: "gray" },
   { k: "4", v: "4", t: false },
   { k: "5", v: "5", t: false },
   { k: "6", v: "6", t: false },
+  { k: "+", v: "+", c: "gray" },
   { k: "7", v: "7", t: false },
   { k: "8", v: "8", t: false },
   { k: "9", v: "9", t: false },
-  { k: "0", v: "0", t: false },
-  { k: ".", v: ".", t: false }
+  { k: "-", v: "-", c: "gray" },
+  { k: "abc", v: "letter", c: "gray width2" },
+  { k: "0", v: "0", t: false, c: "width2" },
+  { k: ".", v: ".", t: false },
+  { k: "=", v: "=", c: "gray" }
 ];
 
 export const MATH = [
   { k: "", v: "^2", i: img.cuadrado },
   { k: "", v: "^3", i: img.tercera },
-  { k: "", v: "/", i: img.fraccion },
-  { k: "", v: "^", i: img.potencia },
+  { k: "", v: "/", i: img.fraction },
+  { k: "x^y", v: "^", i: img.potencia },
   { k: "", v: "\\sqrt", i: img.raiz2 },
-  { k: "", v: "\\nthroot", i: img.raiz },
+  { k: "3次根号", v: "\\nthroot", i: img.raiz },
   { k: "(", v: "(", i: "" },
   { k: ")", v: ")", i: "" },
   { k: "[", v: "[", i: "" },
@@ -71,7 +75,7 @@ export const MATH = [
   { k: "cos", v: "\\cos", i: "" },
   { k: "tan", v: "\\tan", i: "" },
   { k: "π", v: "\\pi", i: "" },
-  { k: "", v: "|", i: img.abs },
+  { k: "|□|", v: "|", i: img.abs },
   { k: "≈", v: "\\approx", i: "" },
   { k: "≠", v: "\\neq", i: "" },
   { k: "%", v: "%", i: "" },
@@ -109,3 +113,4 @@ export const MATH = [
   { k: "→", v: "\\rightarrow", i: "" },
   { k: "⇔", v: "\\iff", i: "" }
 ];
+export const WRITE = ["^2", "^3", "=", "+", "-"];
