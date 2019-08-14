@@ -83,7 +83,10 @@ class LetterPad extends React.PureComponent {
     if (key === "shift") {
       this.setState({ cap: !cap });
     } else {
-      const _k = cap && key !== "Backspace" ? key.toUpperCase() : key;
+      const _k =
+        cap && ["Backspace", "num", "space"].indexOf(key) === -1
+          ? key.toUpperCase()
+          : key;
       if (onClick) onClick(_k);
     }
   }
