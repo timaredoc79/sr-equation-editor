@@ -1,13 +1,14 @@
 {
   "name": "sr-equation-editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "math keypad with mathquill for react",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "build": "webpack --mode production --output dist/main.js",
+    "start": "webpack-dev-server --open",
+    "prepublish": "rm -rf dist/ && npm run build"
   },
   "repository": {
     "type": "git",
