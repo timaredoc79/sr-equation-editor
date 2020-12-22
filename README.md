@@ -1,2 +1,2 @@
-# math-keypad-react
-Math Keypad for React
+# sr-equation-editor
+SR Equation Editor
