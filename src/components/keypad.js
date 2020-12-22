@@ -29,6 +29,12 @@ export default class Keypad extends React.PureComponent {
     });
   }
 
+  componentDidUpdate() {
+    if (this.mathField && this.mathField.latex() !== this.props.latex) {
+      this.mathField.latex(latex)
+    }
+  }
+
   onClickKey = key => {
     this.mathField.cmd(key);
     this.mathField.focus();

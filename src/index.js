@@ -32,7 +32,7 @@ class App extends React.PureComponent {
     const { value } = this.state;
     return (
       <div>
-        <Keypad onChange={this.onChange} />
+        <Keypad latex={value} onChange={this.onChange} />
       </div>
     );
   }
