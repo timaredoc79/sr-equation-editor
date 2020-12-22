@@ -1,6 +1,6 @@
 {
   "name": "sr-equation-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "math keypad with mathquill for react",
   "main": "src/index.js",
   "typings": "src/index.d.ts",
