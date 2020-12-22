@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import Gap from "./components/gap";
 import Keypad from "./components/keypad";
 
 import "mathquill/build/mathquill";
@@ -22,8 +21,6 @@ class App extends React.PureComponent {
     const { value } = this.state;
     return (
       <div>
-        <Gap />
-        <div>latex: {value}</div>
         <Keypad onChange={this.onChange} />
       </div>
     );

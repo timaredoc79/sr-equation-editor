@@ -2,7 +2,7 @@ import React from "react";
 export const back = (
   <svg
     t="1565765606775"
-    class="icon"
+    className="icon"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ export const back = (
 export const shift = (
   <svg
     t="1565693844462"
-    class="icon"
+    className="icon"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +44,7 @@ export const shift = (
 export const cuadrado = (
   <svg
     t="1565765568765"
-    class="icon"
+    className="icon"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export const cuadrado = (
 export const tercera = (
   <svg
     t="1565765812959"
-    class="icon"
+    className="icon"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export const tercera = (
 export const fraction = (
   <svg
     t="1565765850911"
-    class="icon"
+    className="icon"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export const fraction = (
 export const raiz2 = (
   <svg
     t="1565766521940"
-    class="icon"
+    className="icon"
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
