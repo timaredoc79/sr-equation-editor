@@ -27,6 +27,6 @@ class App extends React.PureComponent {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById("root"));
+//ReactDOM.render(<App />, document.getElementById("root"));
 
 export default Keypad;
