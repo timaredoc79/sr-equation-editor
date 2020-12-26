@@ -2,20 +2,14 @@ import * as img from "./images";
 
 export const MATH = [
   { k: "", v: "/", i: img.fraction },
+  { k: "sup", v: "^", i: "" },
+  { k: "sub", v: "_", i: "" },
   { k: "√", v: "\\sqrt", i: "" },
-  { k: "(", v: "(", i: "" },
-  { k: ")", v: ")", i: "" },
-  { k: "[", v: "[", i: "" },
-  { k: "]", v: "]", i: "" },
   { k: "sin", v: "\\sin", i: "" },
   { k: "cos", v: "\\cos", i: "" },
   { k: "tan", v: "\\tan", i: "" },
   { k: "π", v: "\\pi", i: "" },
-  { k: "≈", v: "\\approx", i: "" },
   { k: "≠", v: "\\neq", i: "" },
-  { k: "%", v: "%", i: "" },
-  { k: "+", v: "+", i: "" },
-  { k: "-", v: "-", i: "" },
   { k: "×", v: "\\times", i: "" },
   { k: "÷", v: "\\div", i: "" },
   { k: "±", v: "±", i: "" },
@@ -42,6 +36,5 @@ export const MATH = [
   { k: "log", v: "\\log", i: "" },
   { k: "←", v: "\\leftarrow", i: "" },
   { k: "→", v: "\\rightarrow", i: "" },
-  { k: "⇔", v: "\\iff", i: "" }
+  { k: "⇔", v: "\\iff", i: "" },
 ];
-export const WRITE = ["^2", "^3", "=", "+", "-"];

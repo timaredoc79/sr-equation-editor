@@ -13,12 +13,10 @@ export default class Keypad extends React.PureComponent {
     const MQ = MathQuill.getInterface(2);
     const { onChange } = this.props;
     this.mathField = MQ.MathField(this.input, {
-      spaceBehavesLikeTab: true,
       restrictMismatchedBrackets: true,
       sumStartsWithNEquals: true,
       supSubsRequireOperand: true,
       //charsThatBreakOutOfSupSub: '+-=<>',
-      //autoSubscriptNumerals: true,
       autoOperatorNames: "sin COMMA",
       handlers: {
         edit: function (mathField) {
@@ -36,7 +34,8 @@ export default class Keypad extends React.PureComponent {
   }
 
   onClickKey = key => {
-    this.mathField.cmd(key);
+    if (key === "\\degree") this.mathField.write("^{\\circ}");
+    else this.mathField.cmd(key);
     this.mathField.focus();
   };
   render() {
